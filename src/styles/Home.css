@@ -12,7 +12,11 @@
   box-sizing: border-box;
   overflow: hidden;
 }
-
+.txt-main{
+  margin-top: 5vh;
+  width: 60%;
+  color: #B8C4C0;
+}
 .features {
   width: 100%;
   padding: 20px;
@@ -20,10 +24,33 @@
 
 .feature-item {
   display: flex;
+  justify-content: center; /* Centra los elementos horizontalmente */
+  align-items: center;     /* Centra los elementos verticalmente */
+  margin-bottom: 30px;
+  flex-wrap: nowrap;
+  gap: 10px;               /* Espaciado entre los elementos */
+}
+.feature-item2 {
+  display: flex;
+  flex-direction: row-reverse; /* Invierte el orden de los elementos */
+  justify-content: center;     /* Centra los elementos horizontalmente */
+  align-items: center;         /* Centra los elementos verticalmente */
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  gap: 10px;                   /* Espaciado entre los elementos */
+}
+
+
+
+.feature-item-text {
+  display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 30px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  width: 30%;
+  color: #B8C4C0;
+
 }
 
 /* Estilo para la imagen de escritorio */
@@ -99,12 +126,35 @@
   .feature-item .image-desktop {
     display: none;
   }
+  .feature-item2 .image-desktop {
+    display: none;
+  }
 
   .feature-item .card {
+    display: block;
+  }
+  .feature-item2 .card {
     display: block;
   }
 
   .feature-item-text {
     display: none;
   }
+  .txt-main{
+    width: 100%;
+  }
+}
+.btn-home {
+  background-color: #B8C4C0;
+  color: #1e1e1e;
+  font-size: 12px;          /* Tamaño del texto */
+  text-decoration: none;
+  border-radius: 10px;      /* Bordes redondeados */
+  padding: 10px 30px;       /* Hace el botón más grande */
+  display: inline-block;    /* Asegura que respete el padding */
+  transition: transform 0.2s ease; /* Suaviza el efecto de hover */
+}
+
+.btn-home:hover {
+  transform: scale(1.05); /* Agranda el botón en un 5% */
 }

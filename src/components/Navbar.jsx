@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css'; // Archivo de estilos
+import Logo from '../assets/images/Kaizen_horizontal_2.png';
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -18,7 +19,7 @@ function Navbar() {
   return (
     <nav className="navbar">
       <div className="navbar-logo">
-        <img src="path_to_your_logo.png" alt="Logo" className="logo" />
+        <img src= {Logo} alt="Logo" className="logo" />
       </div>
       <div className={`navbar-links ${isMenuOpen ? 'active' : ''}`}>
         <Link to="/" className="navbar-link" onClick={closeMenu}>Home</Link>

@@ -1,6 +1,7 @@
 // src/components/Home.jsx
 import React, { useState } from 'react';
 import '../styles/Home.css';
+import { Link } from 'react-router-dom';
 
 // Importa las imágenes
 import image1 from '../assets/images/image1.jpg';
@@ -20,34 +21,17 @@ function Home() {
 
   return (
     <div className="home-container">
+      {/* Imagen de Main*/}
       <div className='image-main'>
         <img src={image1} alt="Imagen 1 de escritorio" className="image-desktop-main" />
       </div>
+      {/* Texto de Main*/}
+      <div className='txt-main'>
+        <p>KAIZEN Talent es tu aliado estratégico en la optimización de recursos humanos, enfocado en microempresas, Pymes y emprendedores. Nuestra misión es ayudarte a estructurar y fortalecer tus departamentos clave, desde la creación de perfiles de puesto y organigramas hasta el desarrollo de procesos y formatos personalizados.</p>
+        
+      </div>
       <div className="features">
-        <div className="feature-item">
-          {/* Versión de escritorio */}
-          <img src={image1} alt="Imagen 1 de escritorio" className="image-desktop" />
-          
-          {/* Versión tarjeta para móvil */}
-          <div
-            className={`card ${flipped[0] ? 'flipped' : ''}`}
-            onClick={() => handleFlip(0)}
-          >
-            <div className="card-front">
-              <img src={image1} alt="Imagen 1 de tarjeta" />
-            </div>
-            <div className="card-back">
-              <h3>Feature 1</h3>
-              <p>This is the description of the first feature.</p>
-              <button>Ir</button>
-            </div>
-          </div>
-
-          <div className="feature-item-text">
-            <h3>Feature 1</h3>
-            <p>This is the description of the first feature. The image is on the left and the text is on the right.</p>
-          </div>
-        </div>
+     
 
         <div className="feature-item">
           {/* Versión de escritorio */}
@@ -62,19 +46,25 @@ function Home() {
               <img src={image2} alt="Imagen 2 de tarjeta" />
             </div>
             <div className="card-back">
-              <h3>Feature 2</h3>
-              <p>This is the description of the second feature.</p>
+              <p>Contamos con una amplia experiencia en evaluación de colaboradores, satisfacción laboral, detección de necesidades de capacitación y atracción de talento, ofrecemos soluciones diseñadas para impulsar el crecimiento de tu empresa, siempre adaptándonos a presupuestos limitados.</p>
               <button>Ir</button>
             </div>
           </div>
 
           <div className="feature-item-text">
-            <h3>Feature 2</h3>
-            <p>This is the description of the second feature. The image is on the right and the text is on the left.</p>
+            <p> Contamos con una amplia experiencia en evaluación de colaboradores, satisfacción laboral, detección de necesidades de capacitación y atracción de talento, ofrecemos soluciones diseñadas para impulsar el crecimiento de tu empresa, siempre adaptándonos a presupuestos limitados.
+              <br></br>
+              <br></br>
+
+              <btn>
+          <Link to="/Servicios" className="btn-home" >Servicios</Link>
+        </btn>
+            </p>
+            
           </div>
         </div>
 
-        <div className="feature-item">
+        <div className="feature-item2">
           {/* Versión de escritorio */}
           <img src={image3} alt="Imagen 3 de escritorio" className="image-desktop" />
           
@@ -87,15 +77,20 @@ function Home() {
               <img src={image3} alt="Imagen 3 de tarjeta" />
             </div>
             <div className="card-back">
-              <h3>Feature 3</h3>
-              <p>This is the description of the third feature.</p>
+              <p>En KAIZEN Talent, creemos que contar con una gestión efectiva de recursos humanos no solo es una ventaja, sino una necesidad para llevar tu negocio al siguiente nivel. Estamos comprometidos en ayudarte a crear un entorno laboral eficiente y sostenible, que fomente el desarrollo en equipo y maximice el potencial de tu empresa con los diferentes Formatos que tenemos para ti.</p>
               <button>Ir</button>
             </div>
           </div>
 
           <div className="feature-item-text">
-            <h3>Feature 3</h3>
-            <p>This is the description of the third feature. The image is on the left and the text is on the right.</p>
+            <p>En KAIZEN Talent, creemos que contar con una gestión efectiva de recursos humanos no solo es una ventaja, sino una necesidad para llevar tu negocio al siguiente nivel. Estamos comprometidos en ayudarte a crear un entorno laboral eficiente y sostenible, que fomente el desarrollo en equipo y maximice el potencial de tu empresa con los diferentes Formatos que tenemos para ti.
+            <br></br>
+            <br></br>
+
+              <btn>
+          <Link to="/Contacto" className="btn-home" >Contactanos</Link>
+        </btn>
+            </p>
           </div>
         </div>
       </div>
