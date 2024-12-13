@@ -1,0 +1,121 @@
+/* Navbar.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #F0F0F0; /* Fondo actualizado */
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: relative; /* Necesario para posicionar el icono */
+}
+
+.navbar-logo img {
+  max-width: 150px; /* Ajusta el tamaño del logo */
+  height: auto;
+  margin-bottom: 20px; /* Margen inferior entre logo y el menú */
+}
+
+/* Se agrega margen superior a la sección de enlaces */
+.navbar-links {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  margin-top: 20px; /* Margen entre el logo y los enlaces */
+}
+
+.navbar-link {
+  text-decoration: none;
+  color: #748C84; /* Color de la fuente de los enlaces */
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  margin: 0 20px; /* Espaciado entre los enlaces */
+}
+
+.navbar-link:hover {
+  color: #244C3C; /* Color de hover */
+}
+
+.menu-icon {
+  display: none;
+  cursor: pointer;
+  width: 30px;
+  height: 25px;
+  position: absolute;
+  top: 20px;
+  left: 20px; /* Alineado a la izquierda */
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.menu-icon .line {
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: #333;
+  transition: transform 0.3s ease;
+}
+
+.menu-icon.open .line:nth-child(1) {
+  transform: rotate(45deg) translateY(7px);
+}
+
+.menu-icon.open .line:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-icon.open .line:nth-child(3) {
+  transform: rotate(-45deg) translateY(-7px);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .navbar .navbar-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alinea los elementos a la izquierda */
+    background-color: #F0F0F0;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    padding: 10px 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    transform: translateX(-100%); /* El menú está oculto por defecto */
+    transition: transform 0.3s ease;
+  }
+
+  .navbar .navbar-links.active {
+    transform: translateX(0); /* El menú se despliega cuando se activa */
+  }
+
+  .navbar .navbar-link {
+    margin: 10px 0; /* Espaciado vertical en pantallas pequeñas */
+  }
+
+  .menu-icon {
+    display: flex;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar .navbar-logo img {
+    max-width: 120px;
+  }
+
+  .navbar .navbar-link {
+    font-size: 14px;
+  }
+}
