@@ -2,7 +2,8 @@
 
 import './App.css';
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Navigate} from 'react-router-dom';
+import { BrowserRouter as Router,Routes, Route, Navigate } from 'react-router-dom';
+
 import Navbar from './components/Navbar.jsx'; // Ruta correcta para Navbar
 //Pages
 import Home from './pages/Home';

@@ -1,71 +1,89 @@
-/* src/components/Servicios.css */
+/* Contenedor principal */
 .servicios-container {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #24493E;
-    color: rgb(206, 104, 104);
-    flex-direction: column;
-    padding: 0 20px;
-    box-sizing: border-box;
-    overflow: hidden;
-  }
-  
-  h1 {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  .servicio {
-    margin-bottom: 20px;
-  }
-  
-  .servicio-title {
-    background-color: #24493E;
-    color: white;
-    font-size: 1.5rem;
-    padding: 10px;
-    width: 100%;
-    text-align: left;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-  }
-  
-  .servicio-title:hover {
-    background-color: #1d3b2f;
-  }
-  
-  .servicio-content {
-    background-color: #e0f7fa;
-    padding: 15px;
-    margin-top: 10px;
-    border-radius: 5px;
-    transition: max-height 0.3s ease-in-out;
-    overflow: hidden;
-    max-height: 200px; /* Limita la altura para hacer que el contenido se despliegue de manera suave */
-  }
-  
-  .servicio-content p {
-    margin: 0;
-    font-size: 1rem;
-    line-height: 1.5;
-  }
-  
-  .servicio-content.collapsed {
-    max-height: 0; /* Cuando se colapsa, la altura es 0 */
-  }
-  
-  @media (max-width: 768px) {
-    .servicios-container {
-      padding: 10px;
-    }
-  
-    .servicio-title {
-      font-size: 1.2rem;
-    }
-  }
-  
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  color: #333;
+  color: #B8C4C0;
+
+}
+
+h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+/* Estado inicial: diseño tipo lista */
+.servicio {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  cursor: pointer;
+  background-color: #f9f9f9;
+  height: 50px; /* Altura compacta en estado inicial */
+  transition: all 0.4s ease;
+}
+
+.servicio-title {
+  flex: 1;
+  background-color: #f7f7f7;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border-right: 1px solid #ddd;
+  transition: background-color 0.3s ease;
+}
+
+/* Contenido oculto por defecto */
+.servicio-content {
+  flex: 2;
+  max-width: 0;
+  opacity: 0;
+  overflow: hidden;
+  padding: 0;
+  background-color: #fff;
+  transition: all 0.5s ease;
+}
+
+.servicio-content p {
+  margin: 0;
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Clase activa (cuadro abierto) */
+.servicio.active {
+  height: 150px; /* Altura expandida */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: scale(1.02);
+  transition: height 0.4s ease, box-shadow 0.3s ease;
+}
+
+.servicio.active .servicio-content {
+  max-width: 100%;
+  opacity: 1;
+  padding: 10px 20px;
+}
+
+/* Hover en estado inicial */
+.servicio:hover .servicio-title {
+  background-color: #e3e3e3;
+}
+
+.servicio:hover {
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
