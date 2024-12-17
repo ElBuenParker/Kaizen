@@ -11,7 +11,9 @@ const Servicios = () => {
   const serviciosData = [
     { title: 'Servicio 1', content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' },
     { title: 'Servicio 2', content: 'Nunc volutpat risus at ligula consequat, a hendrerit nunc iaculis.' },
-    { title: 'Servicio 3', content: 'Curabitur laoreet, purus a auctor ullamcorper, tortor libero efficitur justo.' }
+    { title: 'Servicio 3', content: 'Curabitur laoreet, purus a auctor ullamcorper, tortor libero efficitur justo.' },
+    { title: 'Servicio 4', content: 'Nunc volutpat risus at ligula consequat, a hendrerit nunc iaculis.' }
+
   ];
 
   return (
