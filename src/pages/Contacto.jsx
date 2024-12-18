@@ -73,6 +73,9 @@ const Contacto = () => {
       <button onClick={handleWhatsApp} className="btn-whatsapp">
         Contactar por WhatsApp
       </button>
+      <div className='datos'>
+
+      </div>
     </div>
   );
 };
