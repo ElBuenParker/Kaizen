@@ -27,7 +27,7 @@ function Home() {
       </div>
       {/* Texto de Main*/}
       <div className='txt-main'>
-        <p>KAIZEN Talent es tu aliado estratégico en la optimización de recursos humanos, enfocado en microempresas, Pymes y emprendedores. Nuestra misión es ayudarte a estructurar y fortalecer tus departamentos clave, desde la creación de perfiles de puesto y organigramas hasta el desarrollo de procesos y formatos personalizados.</p>
+        <p>KAIZEN es tu aliado estratégico en la optimización de recursos humanos, enfocado en microempresas, Pymes y emprendedores. Nuestra misión es ayudarte a estructurar y fortalecer tus departamentos clave, desde la creación de perfiles de puesto y organigramas hasta el desarrollo de procesos y formatos personalizados.</p>
         
       </div>
       <div className="features">
@@ -46,7 +46,7 @@ function Home() {
               <img src={image2} alt="Imagen 2 de tarjeta" />
             </div>
             <div className="card-back">
-              <p>Contamos con una amplia experiencia en evaluación de colaboradores, satisfacción laboral, detección de necesidades de capacitación y atracción de talento, ofrecemos soluciones diseñadas para impulsar el crecimiento de tu empresa, siempre adaptándonos a presupuestos limitados.
+              <p>Contamos con una amplia experiencia en evaluación de colaboradores, satisfacción laboral, detección de necesidades de capacitación y atracción de talento, ofrecemos soluciones diseñadas para impulsar el crecimiento de tu empresa, siempre adaptándonos a tu presupuesto.
               <br></br>
 
 <btn>
@@ -58,7 +58,7 @@ function Home() {
           </div>
 
           <div className="feature-item-text">
-            <p> Contamos con una amplia experiencia en evaluación de colaboradores, satisfacción laboral, detección de necesidades de capacitación y atracción de talento, ofrecemos soluciones diseñadas para impulsar el crecimiento de tu empresa, siempre adaptándonos a presupuestos limitados.
+            <p> Contamos con una amplia experiencia en evaluación de colaboradores, satisfacción laboral, detección de necesidades de capacitación y atracción de talento, ofrecemos soluciones diseñadas para impulsar el crecimiento de tu empresa, siempre adaptándonos a tu presupuesto.
               <br></br>
               <br></br>
 
@@ -83,7 +83,7 @@ function Home() {
               <img src={image3} alt="Imagen 3 de tarjeta" />
             </div>
             <div className="card-back">
-              <p>En KAIZEN Talent, creemos que contar con una gestión efectiva de recursos humanos no solo es una ventaja, sino una necesidad para llevar tu negocio al siguiente nivel. Estamos comprometidos en ayudarte a crear un entorno laboral eficiente y sostenible, que fomente el desarrollo en equipo y maximice el potencial de tu empresa con los diferentes Formatos que tenemos para ti.
+              <p>En KAIZEN, creemos que contar con una gestión efectiva de recursos humanos no solo es una ventaja, sino una necesidad para llevar tu negocio al siguiente nivel.
               <br></br>
               <btn>
                 <Link to="/Contacto" className="btn-home" >Contactanos</Link>
@@ -94,7 +94,7 @@ function Home() {
           </div>
 
           <div className="feature-item-text">
-            <p>En KAIZEN Talent, creemos que contar con una gestión efectiva de recursos humanos no solo es una ventaja, sino una necesidad para llevar tu negocio al siguiente nivel. Estamos comprometidos en ayudarte a crear un entorno laboral eficiente y sostenible, que fomente el desarrollo en equipo y maximice el potencial de tu empresa con los diferentes Formatos que tenemos para ti.
+            <p>En KAIZEN, creemos que contar con una gestión efectiva de recursos humanos no solo es una ventaja, sino una necesidad para llevar tu negocio al siguiente nivel.
             <br></br>
             <br></br>
 
