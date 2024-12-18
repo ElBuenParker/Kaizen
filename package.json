@@ -2,7 +2,7 @@
   "name": "kaizen",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://elbuenparker.github.io/kaizen",
+  "homepage": "https://elbuenparker.github.io/kaizen",
   "dependencies": {
     "cra-template": "1.2.0",
     "gh-pages": "^6.2.0",
