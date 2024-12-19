@@ -1,4 +1,4 @@
-/* src/components/Home.css */
+/* src/styles/Home.css */
 .home-container {
   width: 100%;
   height: 100%;
@@ -12,149 +12,139 @@
   box-sizing: border-box;
   overflow: hidden;
 }
-.txt-main{
+
+.txt-main {
   margin-top: 5vh;
   width: 60%;
   color: #B8C4C0;
+  text-align: center;
 }
+
 .features {
   width: 100%;
   padding: 20px;
 }
 
-.feature-item {
-  display: flex;
-  justify-content: center; /* Centra los elementos horizontalmente */
-  align-items: center;     /* Centra los elementos verticalmente */
-  margin-bottom: 30px;
-  flex-wrap: nowrap;
-  gap: 10px;               /* Espaciado entre los elementos */
-}
-.feature-item2 {
-  display: flex;
-  flex-direction: row-reverse; /* Invierte el orden de los elementos */
-  justify-content: center;     /* Centra los elementos horizontalmente */
-  align-items: center;         /* Centra los elementos verticalmente */
-  margin-bottom: 30px;
-  flex-wrap: wrap;
-  gap: 10px;                   /* Espaciado entre los elementos */
-}
-
-
-
-.feature-item-text {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 30px;
-  flex-wrap: nowrap;
-  width: 30%;
-  color: #B8C4C0;
-
-}
-
-/* Estilo para la imagen de escritorio */
-.image-desktop {
-  display: block;
-  width: 100%;
-  max-width: 400px;
-  height: auto;
-}
-.image-desktop-main {
-  display: block;
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-}
-
-/* Tarjetas para la versión móvil */
-.card {
-  width: 100%;
-  height: 250px; /* Aseguramos que todas las tarjetas tengan la misma altura */
-  position: relative;
-  perspective: 1000px;
-  display: none;
-  cursor: pointer;
-  border-radius: 8px; /* Bordes suavizados */
-  overflow: hidden;
-}
-
-.card-front,
-.card-back {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  backface-visibility: hidden;
+.feature-item, .feature-item2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: transform 0.6s;
-  border-radius: 8px;
+  margin-bottom: 20px; /* Reduce la separación entre elementos */
+  flex-wrap: nowrap;
 }
 
-.card-front img {
-  width: 80%;
+.feature-item2 {
+  flex-direction: row-reverse;
+}
+
+.image-desktop {
+  flex: 1;
+  max-width: 350px; /* Reduce ligeramente el tamaño máximo */
   height: auto;
 }
 
-.card-back {
-  background-color: #A5A595;
-  color: black;
-  padding: 10px;
-  text-align: center;
-  transform: rotateY(180deg);
+.text-content {
+  flex: 1;
+  max-width: 350px; /* Ajuste proporcional al tamaño de las imágenes */
+  padding: 10px 20px; /* Reduce el padding */
+  color: #B8C4C0;
+  text-align: justify;
 }
 
-.card-back button {
+.overlay-main {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  z-index: 2;
+}
+
+.main-title {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.btn-outline {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+  background-color: white;
+  color: #24493E;
+}
+
+.btn-home {
+  background: #ffffff;
+  color: #24493E;
+  padding: 8px 15px; /* Reduce ligeramente el tamaño del botón */
+  border-radius: 5px;
+  text-decoration: none;
+  transition: all 0.3s ease;
   margin-top: 10px;
 }
 
-/* Tarjetas giradas */
-.card.flipped .card-front {
-  transform: rotateY(180deg);
-}
-
-.card.flipped .card-back {
-  transform: rotateY(360deg);
-}
-
-/* Media query para pantallas pequeñas (móviles y tabletas) */
-@media (max-width: 768px) {
-  /* Mostrar solo las tarjetas en móvil */
-  .feature-item .image-desktop {
-    display: none;
-  }
-  .feature-item2 .image-desktop {
-    display: none;
-  }
-
-  .feature-item .card {
-    display: block;
-  }
-  .feature-item2 .card {
-    display: block;
-  }
-
-  .feature-item-text {
-    display: none;
-  }
-  .txt-main{
-    width: 100%;
-  }
-}
-.btn-home {
-  background-color: #B8C4C0;
-  color: #1e1e1e;
-  font-size: 12px;          /* Tamaño del texto */
-  text-decoration: none;
-  border-radius: 10px;      /* Bordes redondeados */
-  padding: 10px 30px;       /* Hace el botón más grande */
-  display: inline-block;    /* Asegura que respete el padding */
-  transition: transform 0.2s ease; /* Suaviza el efecto de hover */
-}
-
 .btn-home:hover {
-  transform: scale(1.05); /* Agranda el botón en un 5% */
+  background-color: #B8C4C0;
+}
+
+/* Animaciones */
+[data-aos="fade-in"], [data-aos="fade-up"] {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s, transform 1s;
+}
+
+[data-aos="fade-down"] {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 1s, transform 1s;
+}
+
+[data-aos="fade-left"] {
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: opacity 1s, transform 1s;
+}
+
+[data-aos="fade-right"] {
+  opacity: 0;
+  transform: translateX(20px);
+  transition: opacity 1s, transform 1s;
+}
+
+[data-aos="fade-in"].aos-animate, [data-aos="fade-up"].aos-animate, 
+[data-aos="fade-left"].aos-animate, [data-aos="fade-right"].aos-animate, 
+[data-aos="fade-down"].aos-animate {
+  opacity: 1;
+  transform: translate(0);
+}
+
+/* Estilos Responsivos */
+@media (max-width: 768px) {
+  .feature-item, .feature-item2 {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .text-content {
+    max-width: 100%;
+    margin: 10px 0; /* Reduce la separación entre texto e imagen */
+  }
+
+  .image-desktop {
+    max-width: 100%;
+  }
+
+  .btn-home {
+    margin-top: 10px;
+  }
 }
