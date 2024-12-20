@@ -27,7 +27,8 @@ function Home() {
           data-aos="fade-in"
         />
         <div className="overlay-main">
-          <h1 className="main-title">Bienvenido a KAIZEN</h1>
+          <h1 className="main-title">Soluciones integrales de recursos humanos para crecer contigo
+          </h1>
           <Link to="/Contacto" className="btn-outline">Contáctanos</Link>
         </div>
       </div>
@@ -53,6 +54,9 @@ function Home() {
           <div className="text-content" data-aos="fade-left">
             <p>
               Contamos con una amplia experiencia en evaluación de colaboradores, satisfacción laboral, detección de necesidades de capacitación y atracción de talento. Ofrecemos soluciones diseñadas para impulsar el crecimiento de tu empresa, siempre adaptándonos a tu presupuesto.
+            <br></br>
+            <br></br>
+
             </p>
             <Link to="/Servicios" className="btn-home">Servicios</Link>
           </div>
@@ -70,6 +74,8 @@ function Home() {
           <div className="text-content" data-aos="fade-right">
             <p>
               En KAIZEN, creemos que contar con una gestión efectiva de recursos humanos no solo es una ventaja, sino una necesidad para llevar tu negocio al siguiente nivel.
+              <br></br>
+              <br></br>
             </p>
             <Link to="/Contacto" className="btn-home">Contáctanos</Link>
           </div>
