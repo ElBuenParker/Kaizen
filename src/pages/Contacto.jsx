@@ -1,5 +1,7 @@
-import React, { useState } from 'react';
-import '../styles/Contacto.css'; // Asegúrate de importar el archivo CSS
+import React, { useState, useEffect } from 'react';
+import '../styles/Contacto.css';
+import 'aos/dist/aos.css'; // Importa los estilos de AOS
+import AOS from 'aos'; // Importa la biblioteca AOS
 
 const Contacto = () => {
   const [formData, setFormData] = useState({
@@ -7,6 +9,10 @@ const Contacto = () => {
     correo: '',
     mensaje: '',
   });
+
+  useEffect(() => {
+    AOS.init({ duration: 1000 }); // Inicializa AOS con duración de animación
+  }, []);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -23,10 +29,8 @@ const Contacto = () => {
   };
 
   const handleWhatsApp = () => {
-    const message = encodeURIComponent(
-      'Me gustaría obtener información de su servicio Kaizen.'
-    );
-    const phoneNumber = '5210000000000'; // Reemplaza con el número de teléfono con código internacional
+    const message = encodeURIComponent('Me gustaría obtener información de su servicio Kaizen.');
+    const phoneNumber = '5210000000000';
     const whatsappLink = `https://wa.me/${phoneNumber}?text=${message}`;
     window.open(whatsappLink, '_blank');
   };
@@ -73,7 +77,14 @@ const Contacto = () => {
       <button onClick={handleWhatsApp} className="btn-whatsapp">
         Contactar por WhatsApp
       </button>
-      
+
+      <div className="datos-container" data-aos="fade-up">
+        <h2>Datos de Kaizen</h2>
+        <p><strong>Teléfono:</strong> +52 1 000 000 0000</p>
+        <p><strong>Correo:</strong> contacto@kaizen.com</p>
+        <p><strong>Dirección:</strong> Calle Ejemplo #123, Guadalajara, Jalisco</p>
+        <p><strong>Horario:</strong> Lunes a Viernes, 9:00 AM - 6:00 PM</p>
+      </div>
     </div>
   );
 };
