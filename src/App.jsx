@@ -10,6 +10,9 @@ import Footer from './components/Footer.jsx'; // Importa el Footer
 import Home from './pages/Home';
 import Contacto from './pages/Contacto.jsx';
 import Servicios from './pages/Servicios.jsx';
+import Terminos from './pages/Terminos.jsx';
+import Privacidad from './pages/Privacidad.jsx';
+
 
 function App() {
   return (
@@ -24,6 +27,8 @@ function App() {
               <Route path="/home" element={<Home />} />
               <Route path="/Contacto" element={<Contacto />} />
               <Route path="/Servicios" element={<Servicios />} />
+              <Route path="/Terminos" element={<Terminos />} />
+              <Route path="/Privacidad" element={<Privacidad />} />
               <Route path="*" element={<Navigate replace to="/" />} />
             </Routes>
           </Router>
