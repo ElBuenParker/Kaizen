@@ -1,29 +1,37 @@
 /* Contenedor principal */
 .servicios-container {
   width: 90%;
-  max-width: 800px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
   font-family: Arial, sans-serif;
   color: #333;
   color: #B8C4C0;
 }
+
+/* Contenedor de título y descripción */
 .servicios-header {
   width: 100%;
-  height: 200px; /* Ajusta la altura de la portada */
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 20px; /* Espaciado debajo de la imagen */
+  background-color: #748C84;
+  padding: 30px 20px;
+  text-align: center;
+  color: white;
+  margin-bottom: 30px;
 }
 
-.servicios-portada {
-  width: 100px;
-  height: 100px;
-  object-fit: cover; /* Recorta o ajusta la imagen para que se vea bien */
+.servicios-header h1 {
+  font-size: 3rem;
+  color: #A5A595;
+  margin: 0;
 }
 
+.separator {
+  border: 1px solid #A5A595;
+  width: 50%;
+  margin: 20px auto;
+}
+
+/* Titulo de los servicios */
 h1 {
   text-align: center;
   font-size: 2rem;
@@ -42,7 +50,7 @@ h1 {
   overflow: hidden;
   cursor: pointer;
   background-color: #f9f9f9;
-  height: 50px; /* Altura compacta en estado inicial */
+  height: 50px;
   transition: all 0.4s ease;
 }
 
@@ -61,7 +69,30 @@ h1 {
   transition: background-color 0.3s ease;
 }
 
-/* Contenido oculto por defecto */
+.icon-leaf {
+  margin-right: 10px;
+  color: #A5A595;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.servicio:hover .icon-leaf {
+  color: #24493E;
+}
+
+.servicio.active {
+  height: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: scale(1.02);
+  transition: all 0.4s ease;
+}
+
+.servicio.active .servicio-content {
+  max-height: 100%;
+  opacity: 1;
+  padding: 10px 20px;
+}
+
 .servicio-content {
   flex: 2;
   max-height: 0;
@@ -72,95 +103,82 @@ h1 {
   transition: all 0.5s ease;
 }
 
-.servicio-content p {
-  margin: 5px 0;
-  padding: 0;
-  line-height: 1.5;
-  font-size: 1rem;
-  color: #555;
-  text-align: left; /* Alineación a la izquierda */
-}
-
-/* Clase activa (cuadro abierto) */
-.servicio.active {
-  height: auto; /* Ajusta automáticamente la altura según el contenido */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transform: scale(1.02);
-  transition: all 0.4s ease;
-}
-
-.servicio.active .servicio-content {
-  max-height: 100%; /* Permitir que el contenido ocupe su altura total */
-  opacity: 1;
-  padding: 10px 20px;
-}
-
-/* Hover en estado inicial */
-.servicio:hover .servicio-title {
-  background-color: #e3e3e3;
-}
-
-.servicio:hover {
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-}
 .servicio-content ul {
   margin: 0;
-  padding-left: 20px; /* Espaciado para el marcador */
-  list-style-type: disc; /* Asegura que sea un punto */
+  padding-left: 20px;
+  list-style-type: disc;
 }
 
 .servicio-content li {
-  margin-bottom: 5px; /* Espaciado entre elementos */
+  margin-bottom: 5px;
   line-height: 1.5;
-  color: #000; /* Texto en negro */
-  font-size: 1rem; /* Ajusta el tamaño si es necesario */
+  color: #000;
+  font-size: 1rem;
+  text-align: left; /* Evitar grandes espacios en la última línea */
 }
-/* Versión responsive para móviles */
-@media (max-width: 768px) {
-  .servicio {
-    flex-direction: column; /* Cambia a disposición vertical */
-    height: auto; /* Permite que la altura sea dinámica */
-  }
 
-  .servicio-title {
-    text-align: center; /* Centra el título en móvil */
-    border-right: none; /* Quita el borde lateral */
-    border-bottom: 1px solid #ddd; /* Añade un borde inferior */
-  }
-
-  .servicio-content {
-    max-width: 100%; /* Asegura que ocupe todo el ancho */
-    padding: 10px 20px; /* Ajusta el relleno para que sea uniforme */
-  }
-
-  .servicio.active {
-    height: auto; /* Permite que la altura se ajuste al contenido */
-  }
-
-  .servicio-content ul {
-    padding-left: 15px; /* Espaciado ajustado para listas */
-  }
-}
-/* Contenedor para el botón */
 .button-container {
   display: flex;
-  justify-content: center; /* Centra el botón horizontalmente */
-  margin-top: 30px; /* Añade espacio arriba del botón */
+  justify-content: center;
+  margin-top: 30px;
 }
 
-/* Estilo para el botón */
 .servicios-btn {
   background-color: #B8C4C0;
   color: #1e1e1e;
-  font-size: 12px;          /* Tamaño del texto */
+  font-size: 12px;
   text-decoration: none;
-  border-radius: 10px;      /* Bordes redondeados */
-  padding: 10px 30px;       /* Hace el botón más grande */
-  display: inline-block;    /* Asegura que respete el padding */
-  transition: transform 0.2s ease; /* Suaviza el efecto de hover */
+  border-radius: 10px;
+  padding: 10px 30px;
+  display: inline-block;
+  transition: transform 0.2s ease;
 }
 
-/* Hover para el botón */
 .servicios-btn:hover {
-  transform: scale(1.05); /* Agranda el botón en un 5% */
+  transform: scale(1.05);
+}
+
+.servicios-logo {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.servicios-portada {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .servicio {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .servicio-title {
+    text-align: center;
+    border-right: none;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .servicio-content {
+    max-width: 100%;
+    padding: 10px 20px;
+  }
+
+  .servicio.active {
+    height: auto;
+  }
+
+  .servicio-content ul {
+    padding-left: 15px;
+  }
+}
+.servicios-portada {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.5)); /* Sombra alrededor de la imagen */
 }
