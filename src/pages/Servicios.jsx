@@ -10,6 +10,12 @@ const Servicios = () => {
   const toggleContent = (index) => {
     setActiveIndex(index === activeIndex ? null : index);
   };
+  const handleWhatsApp = () => {
+    const message = encodeURIComponent('Me gustaría obtener información de su servicio Kaizen.');
+    const phoneNumber = '523345195927';
+    const whatsappLink = `https://wa.me/${phoneNumber}?text=${message}`;
+    window.open(whatsappLink, '_blank');
+  };
 
   const serviciosData = [
     {
@@ -83,11 +89,10 @@ const Servicios = () => {
           </div>
         </div>
       ))}
-      <div className="button-container">
-        <Link to="/Contacto" className="servicios-btn">
-          Contáctanos
-        </Link>
-      </div>
+    
+      <button onClick={handleWhatsApp} className="btn-whatsapp">
+        Contactar por WhatsApp
+      </button>
       <div className="servicios-logo">
         <img src={KaizenLogo} alt="Portada de Servicios" className="servicios-portada" />
       </div>

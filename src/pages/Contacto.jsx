@@ -30,7 +30,7 @@ const Contacto = () => {
 
   const handleWhatsApp = () => {
     const message = encodeURIComponent('Me gustaría obtener información de su servicio Kaizen.');
-    const phoneNumber = '5210000000000';
+    const phoneNumber = '523345195927';
     const whatsappLink = `https://wa.me/${phoneNumber}?text=${message}`;
     window.open(whatsappLink, '_blank');
   };
@@ -80,10 +80,10 @@ const Contacto = () => {
 
       <div className="datos-container" data-aos="fade-up">
         <h2>Datos de Kaizen</h2>
-        <p><strong>Teléfono:</strong> +52 1 000 000 0000</p>
-        <p><strong>Correo:</strong> contacto@kaizen.com</p>
-        <p><strong>Dirección:</strong> Calle Ejemplo #123, Guadalajara, Jalisco</p>
-        <p><strong>Horario:</strong> Lunes a Viernes, 9:00 AM - 6:00 PM</p>
+        <p><strong>Teléfono:</strong> +52 334 5195 927</p>
+        <p><strong>Correo:</strong> Kaizen.talent.rrhh@gmail.com</p>
+        <p><strong>Dirección:</strong> Guadalajara, Jalisco, México</p>
+        <p><strong>Horario de Atención:</strong> Lunes a Viernes, 9:00 AM - 6:00 PM</p>
       </div>
     </div>
   );
