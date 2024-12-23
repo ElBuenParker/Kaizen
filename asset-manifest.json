@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Kaizen/static/css/main.812d4388.css",
-    "main.js": "/Kaizen/static/js/main.b04f02cc.js",
+    "main.css": "/Kaizen/static/css/main.1b7d905f.css",
+    "main.js": "/Kaizen/static/js/main.9efa9214.js",
     "static/js/488.cf4d4adb.chunk.js": "/Kaizen/static/js/488.cf4d4adb.chunk.js",
     "static/media/image2.jpg": "/Kaizen/static/media/image2.6e86a41292606b5616b4.jpg",
     "static/media/image3.jpg": "/Kaizen/static/media/image3.ab37cd1c5c5813142f04.jpg",
@@ -9,12 +9,12 @@
     "static/media/Kaizen.png": "/Kaizen/static/media/Kaizen.9f7f61036d078696fb61.png",
     "static/media/Kaizen_horizontal_2.png": "/Kaizen/static/media/Kaizen_horizontal_2.2526feae5dfb70f2a634.png",
     "index.html": "/Kaizen/index.html",
-    "main.812d4388.css.map": "/Kaizen/static/css/main.812d4388.css.map",
-    "main.b04f02cc.js.map": "/Kaizen/static/js/main.b04f02cc.js.map",
+    "main.1b7d905f.css.map": "/Kaizen/static/css/main.1b7d905f.css.map",
+    "main.9efa9214.js.map": "/Kaizen/static/js/main.9efa9214.js.map",
     "488.cf4d4adb.chunk.js.map": "/Kaizen/static/js/488.cf4d4adb.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.812d4388.css",
-    "static/js/main.b04f02cc.js"
+    "static/css/main.1b7d905f.css",
+    "static/js/main.9efa9214.js"
   ]
 }
