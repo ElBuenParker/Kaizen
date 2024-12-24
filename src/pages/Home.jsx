@@ -4,6 +4,7 @@ import '../styles/Home.css';
 import { Link } from 'react-router-dom';
 import 'aos/dist/aos.css';
 import AOS from 'aos';
+import { FaLeaf, FaWhatsapp } from 'react-icons/fa';
 
 // Importa las imágenes
 import image1 from '../assets/images/image1.jpg';
@@ -27,7 +28,7 @@ function Home() {
           data-aos="fade-in"
         />
         <div className="overlay-main">
-          <h1 className="main-title">Soluciones integrales de recursos humanos para crecer contigo 
+          <h1 className="main-title">Soluciones de Recursos humanos integrales: <br></br>creciendo contigo desde la raíz
           </h1>
           <Link to="/Contacto" className="btn-outline">Solicita Asesoria</Link>
         </div>
@@ -58,7 +59,7 @@ function Home() {
             <br></br>
 
             </p>
-            <Link to="/Servicios" className="btn-home">Servicios</Link>
+            <Link to="/Servicios" className="btn-home"><FaLeaf />Conoce Nuestros Servicios</Link>
           </div>
         </div>
 
@@ -77,7 +78,7 @@ function Home() {
               <br></br>
               <br></br>
             </p>
-            <Link to="/Contacto" className="btn-home">Contáctanos</Link>
+            <Link to="/Contacto" className="btn-home"><FaLeaf /> Contáctanos</Link>
           </div>
         </div>
       </div>

@@ -1,22 +1,37 @@
-/* eslint-disable no-redeclare */
-
-import './App.css';
-import React from 'react';
+import React, { useEffect } from 'react';
+import './index.css';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { FaLeaf } from 'react-icons/fa';
 
-import Navbar from './components/Navbar.jsx'; // Ruta correcta para Navbar
-import Footer from './components/Footer.jsx'; // Importa el Footer
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 // Pages
 import Home from './pages/Home';
-import Contacto from './pages/Contacto.jsx';
-import Servicios from './pages/Servicios.jsx';
-import Terminos from './pages/Terminos.jsx';
-import Privacidad from './pages/Privacidad.jsx';
-
+import Contacto from './pages/Contacto';
+import Servicios from './pages/Servicios';
+import Terminos from './pages/Terminos';
+import Privacidad from './pages/Privacidad';
 
 function App() {
+  useEffect(() => {
+    const leafCount = 10; // Número de hojas
+    const container = document.querySelector(".background-animation");
+
+    if (container) {
+      for (let i = 0; i < leafCount; i++) {
+        const leaf = document.createElement("div");
+        leaf.classList.add("leaf");
+        container.appendChild(leaf);
+      }
+    }
+  }, []);
+
   return (
     <>
+      {/* Fondo animado */}
+      <div className="background-animation"></div>
+
+      {/* Contenido principal */}
       <div className="App">
         <main className="inicio">
           <Router>
@@ -33,7 +48,7 @@ function App() {
             </Routes>
           </Router>
         </main>
-        <Footer /> {/* Agregado aquí */}
+        <Footer />
       </div>
     </>
   );

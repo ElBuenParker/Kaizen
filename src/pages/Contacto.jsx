@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import '../styles/Contacto.css';
-import 'aos/dist/aos.css'; // Importa los estilos de AOS
-import AOS from 'aos'; // Importa la biblioteca AOS
+import 'aos/dist/aos.css';
+import AOS from 'aos';
 import { FaLeaf, FaWhatsapp } from 'react-icons/fa';
-
 
 const Contacto = () => {
   const [formData, setFormData] = useState({
@@ -13,7 +12,7 @@ const Contacto = () => {
   });
 
   useEffect(() => {
-    AOS.init({ duration: 1000 }); // Inicializa AOS con duración de animación
+    AOS.init({ duration: 1000 });
   }, []);
 
   const handleChange = (e) => {
@@ -26,7 +25,7 @@ const Contacto = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const mailtoLink = `mailto:xxxxx@gmail.com?subject=Consulta desde la página&body=Nombre: ${formData.nombre}%0ACorreo: ${formData.correo}%0AMensaje: ${formData.mensaje}`;
+    const mailtoLink = `mailto:Kaizen.talent.rrhh@gmail.com?subject=Consulta desde la página&body=Nombre: ${formData.nombre}%0ACargo: ${formData.cargo}%0ACorreo: ${formData.correo}%0AMensaje: ${formData.mensaje}`;
     window.location.href = mailtoLink;
   };
 
@@ -39,14 +38,25 @@ const Contacto = () => {
 
   return (
     <div className="contacto-container">
-      <h1>Contacto</h1>
-      <form onSubmit={handleSubmit} className="contacto-form">
-        <label htmlFor="nombre">Nombre:</label>
+      <h1>
+        <FaLeaf /> Contáctanos
+      </h1>
+      <form onSubmit={handleSubmit} className="contacto-form" data-aos="zoom-in">
+        <label htmlFor="nombre">¿Cual es tu Nombre?</label>
         <input
           type="text"
           id="nombre"
           name="nombre"
           value={formData.nombre}
+          onChange={handleChange}
+          required
+        />
+        <label htmlFor="cargo">¿Cual es tu cargo?</label>
+        <input
+          type="text"
+          id="cargo"
+          name="cargo"
+          value={formData.cargo}
           onChange={handleChange}
           required
         />
@@ -61,7 +71,7 @@ const Contacto = () => {
           required
         />
 
-        <label htmlFor="mensaje">Mensaje:</label>
+        <label htmlFor="mensaje">Escríbenos tu mensaje:</label>
         <textarea
           id="mensaje"
           name="mensaje"
@@ -72,14 +82,14 @@ const Contacto = () => {
         ></textarea>
 
         <button type="submit" className="btn-enviar">
-          Enviar
+          <FaLeaf /> Enviar
         </button>
       </form>
 
-      <button onClick={handleWhatsApp} className="btn-whatsapp">
-              <FaWhatsapp className="whatsapp-icon" /> 
-              <span className="whatsapp-text">Contáctanos por WhatsApp</span>
-            </button>
+      <button onClick={handleWhatsApp} className="btn-whatsapp" data-aos="fade-right">
+        <FaWhatsapp className="whatsapp-icon" /> 
+        <span className="whatsapp-text">Contáctanos por WhatsApp</span>
+      </button>
 
       <div className="datos-container" data-aos="fade-up">
         <h2>Datos de Kaizen</h2>

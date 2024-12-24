@@ -1,5 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;700&display=swap');
+
+
 /* Contenedor principal */
 .servicios-container {
+  position: relative;
+  z-index: 10; /* Al frente del fondo */
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;
@@ -23,6 +28,7 @@
   font-size: 3rem;
   color: #A5A595;
   margin: 0;
+  font-family: 'Roboto Slab', serif;
 }
 
 .separator {
@@ -138,7 +144,8 @@ h1 {
 }
 
 .btn-whatsapp:hover {
-  transform: translateY(-5px);
+  transform: translateY(-5px) scale(1.1);
+
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
   background-color: #546b63;
 }

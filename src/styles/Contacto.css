@@ -1,27 +1,53 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;700&display=swap');
 .contacto-container {
   background-color: #f9f9f9;
   padding: 20px;
   max-width: 600px;
   margin: 0 auto;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
   color: #333;
   margin-top: 1.5vh;
+  position: relative;
+  overflow: hidden;
+  font-family: 'Roboto Slab', serif;
+
 }
 
-h1, h2 {
+.contacto-container::before {
+  content: '';
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  width: 150px;
+  height: 150px;
+  background: radial-gradient(ellipse at center, #3f816c 50%, transparent 70%);
+  z-index: 0;
+  animation: rotate-leaf 10s linear infinite;
+}
+
+@keyframes rotate-leaf {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+h1 {
   text-align: center;
   margin-bottom: 20px;
+  color: #24493e;
+  position: relative;
 }
 
 .contacto-form {
   display: flex;
   flex-direction: column;
-}
-
-.contacto-form label {
-  margin-bottom: 5px;
-  font-weight: bold;
+  position: relative;
+  z-index: 1;
 }
 
 .contacto-form input,
@@ -31,12 +57,14 @@ h1, h2 {
   border: 1px solid #ccc;
   border-radius: 5px;
   font-size: 1rem;
+  transition: all 0.3s;
 }
 
 .contacto-form input:focus,
 .contacto-form textarea:focus {
   border-color: #24493e;
-  outline: none;
+  box-shadow: 0 0 8px #3f816c;
+  transform: scale(1.05);
 }
 
 .btn-enviar,
@@ -49,19 +77,13 @@ h1, h2 {
   border-radius: 5px;
   cursor: pointer;
   margin-top: 10px;
-  transition: background-color 0.3s;
+  transition: transform 0.3s, background-color 0.3s;
 }
 
-.btn-enviar:hover {
-  background-color: #546b63;
-}
-
-.btn-whatsapp {
-  background-color: #3f816c;
-}
-
+.btn-enviar:hover,
 .btn-whatsapp:hover {
   background-color: #546b63;
+  transform: translateY(-5px) scale(1.1);
 }
 
 .datos-container {
@@ -69,7 +91,7 @@ h1, h2 {
   background-color: #fff;
   padding: 15px;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
   color: #444;
 }
 
@@ -86,5 +108,7 @@ h1, h2 {
   .btn-enviar,
   .btn-whatsapp {
     font-size: 0.9rem;
+    transform: translateY(-5px) scale(1.1);
+
   }
 }
