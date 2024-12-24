@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import '../styles/Servicios.css';
 import KaizenLogo from '../assets/images/Kaizen.png';
-import { Link } from 'react-router-dom';
-import { FaLeaf } from 'react-icons/fa'; // Importa el ícono de hoja
+import { FaLeaf, FaWhatsapp } from 'react-icons/fa';
 
 const Servicios = () => {
   const [activeIndex, setActiveIndex] = useState(null);
@@ -10,6 +9,7 @@ const Servicios = () => {
   const toggleContent = (index) => {
     setActiveIndex(index === activeIndex ? null : index);
   };
+
   const handleWhatsApp = () => {
     const message = encodeURIComponent('Me gustaría obtener información de su servicio Kaizen.');
     const phoneNumber = '523345195927';
@@ -91,7 +91,8 @@ const Servicios = () => {
       ))}
     
       <button onClick={handleWhatsApp} className="btn-whatsapp">
-        Contactar por WhatsApp
+        <FaWhatsapp className="whatsapp-icon" /> 
+        <span className="whatsapp-text">Contáctanos por WhatsApp</span>
       </button>
       <div className="servicios-logo">
         <img src={KaizenLogo} alt="Portada de Servicios" className="servicios-portada" />

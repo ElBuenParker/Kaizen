@@ -114,28 +114,42 @@ h1 {
   line-height: 1.5;
   color: #000;
   font-size: 1rem;
-  text-align: left; /* Evitar grandes espacios en la última línea */
+  text-align: left;
 }
 
-.button-container {
+.btn-whatsapp {
   display: flex;
+  align-items: center;
   justify-content: center;
-  margin-top: 30px;
+  padding: 12px 25px;
+  background-color: #3f816c;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  cursor: pointer;
+  width: auto;
+  max-width: 250px;
+  margin: 20px auto; /* Centrado en el contenedor */
+  text-align: center;
+  position: relative;
 }
 
-.servicios-btn {
-  background-color: #B8C4C0;
-  color: #1e1e1e;
-  font-size: 12px;
-  text-decoration: none;
-  border-radius: 10px;
-  padding: 10px 30px;
-  display: inline-block;
-  transition: transform 0.2s ease;
+.btn-whatsapp:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  background-color: #546b63;
 }
 
-.servicios-btn:hover {
-  transform: scale(1.05);
+.btn-whatsapp .whatsapp-icon {
+  margin-right: 10px;
+  font-size: 1.4rem;
+}
+
+.btn-whatsapp .whatsapp-text {
+  margin-left: 5px;
 }
 
 .servicios-logo {
@@ -145,9 +159,10 @@ h1 {
 }
 
 .servicios-portada {
-  width: 100px;
-  height: 100px;
+  width: 200px;
+  height: 200px;
   object-fit: cover;
+  filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.5));
 }
 
 /* Responsive */
@@ -176,10 +191,3 @@ h1 {
     padding-left: 15px;
   }
 }
-.servicios-portada {
-  width: 200px;
-  height: 200px;
-  object-fit: cover;
-  filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.5)); /* Sombra alrededor de la imagen */
-}
-

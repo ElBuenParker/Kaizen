@@ -23,8 +23,8 @@ function Navbar() {
       </div>
       <div className={`navbar-links ${isMenuOpen ? 'active' : ''}`}>
         <Link to="/" className="navbar-link" onClick={closeMenu}>Inicio</Link>
-        <Link to="/Servicios" className="navbar-link" onClick={closeMenu}>Servicios</Link>
-        <Link to="/Contacto" className="navbar-link" onClick={closeMenu}>Contacto</Link>
+        <Link to="/Servicios" className="navbar-link" onClick={closeMenu}>Nuestros Servicios</Link>
+        <Link to="/Contacto" className="navbar-link" onClick={closeMenu}>Contáctanos</Link>
       </div>
       <div className="menu-icon" onClick={toggleMenu}>
         <div className={`line ${isMenuOpen ? 'open' : ''}`}></div>

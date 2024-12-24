@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import '../styles/Contacto.css';
 import 'aos/dist/aos.css'; // Importa los estilos de AOS
 import AOS from 'aos'; // Importa la biblioteca AOS
+import { FaLeaf, FaWhatsapp } from 'react-icons/fa';
+
 
 const Contacto = () => {
   const [formData, setFormData] = useState({
@@ -75,8 +77,9 @@ const Contacto = () => {
       </form>
 
       <button onClick={handleWhatsApp} className="btn-whatsapp">
-        Contactar por WhatsApp
-      </button>
+              <FaWhatsapp className="whatsapp-icon" /> 
+              <span className="whatsapp-text">Contáctanos por WhatsApp</span>
+            </button>
 
       <div className="datos-container" data-aos="fade-up">
         <h2>Datos de Kaizen</h2>

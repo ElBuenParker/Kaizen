@@ -29,7 +29,7 @@ function Home() {
         <div className="overlay-main">
           <h1 className="main-title">Soluciones integrales de recursos humanos para crecer contigo 
           </h1>
-          <Link to="/Contacto" className="btn-outline">Contáctanos</Link>
+          <Link to="/Contacto" className="btn-outline">Solicita Asesoria</Link>
         </div>
       </div>
 
