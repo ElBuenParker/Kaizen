@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;700&display=swap');
+
 /* Estilos generales */
 .aviso-container {
     font-family: 'Arial', sans-serif;
@@ -7,6 +9,8 @@
     padding: 30px;
     border-radius: 15px;  /* Borde curvado ligero */
     box-sizing: border-box;
+    font-family: 'Roboto Slab', serif;
+
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra suave */
   }
   

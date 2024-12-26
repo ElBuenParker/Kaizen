@@ -1,46 +1,52 @@
+/* Footer.css */
+
 .footer {
-  background-color: #222;
-  color: #fff;
+  background-color: #1E1E1E; /* Fondo oscuro */
+  color: #F0F0F0; /* Color del texto claro */
   padding: 20px 10px;
-  text-align: center;
+  width: 100%; /* Asegura que el footer tenga el mismo ancho que la página */
+  text-align: center; /* Centra el texto */
+  z-index: 9999; /* Asegura que el footer esté encima de otros elementos */
+  position: relative; /* Hace que el footer esté al final del contenido */
 }
 
-.footer-content {
+.footer-links {
   display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-.footer-menu {
-  text-align: left;
-}
-
-.footer-menu h3 {
+  justify-content: center; /* Centra los enlaces horizontalmente */
+  gap: 20px; /* Espaciado entre los enlaces */
   margin-bottom: 10px;
-  font-size: 1.2rem;
 }
 
-.footer-menu ul {
-  list-style: none;
-  padding: 0;
+.footer-link {
+  text-decoration: none; /* Elimina el subrayado de los enlaces */
+  color: #F0F0F0; /* Color del texto */
+  font-size: 14px;
+  transition: color 0.3s ease; /* Transición suave de color */
 }
 
-.footer-menu ul li {
-  margin: 5px 0;
+.footer-link:hover {
+  color: #52bd92; /* Color al pasar el ratón sobre los enlaces */
 }
 
-.footer-menu ul li a {
-  color: #fff;
-  text-decoration: none;
-  transition: color 0.3s;
+.footer-rights {
+  text-align: center; /* Centra el texto de derechos reservados */
+  margin-top: 10px;
 }
 
-.footer-menu ul li a:hover {
-  color: #00bcd4;
+.footer-rights p {
+  font-size: 12px;
+  margin: 0;
 }
 
-.footer-copy {
-  margin-top: 20px;
-  font-size: 0.9rem;
+/* Responsividad para dispositivos más pequeños */
+@media (max-width: 768px) {
+  .footer-links {
+    flex-direction: column; /* En dispositivos móviles, los enlaces se disponen en columna */
+    align-items: center; /* Alinea los enlaces al centro */
+  }
+
+  .footer-link {
+    margin-bottom: 10px; /* Espaciado entre los enlaces en vertical */
+  }
 }
+

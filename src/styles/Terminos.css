@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;700&display=swap');
+
 /* Estilos generales */
 .terminos-container {
-  font-family: 'Arial', sans-serif;
+  font-family: 'Roboto Slab', serif;
   background-color: #B8C4C0;  /* Fondo con color solicitado */
   margin: 40px auto;
   max-width: 900px;  /* Tamaño adecuado para el contenedor */

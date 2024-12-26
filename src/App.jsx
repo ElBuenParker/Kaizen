@@ -1,8 +1,6 @@
 import React, { useEffect } from 'react';
 import './index.css';
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import { FaLeaf } from 'react-icons/fa';
-
+import { Routes, Route, Navigate } from 'react-router-dom'; // Sin Router ni BrowserRouter
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 // Pages
@@ -14,13 +12,13 @@ import Privacidad from './pages/Privacidad';
 
 function App() {
   useEffect(() => {
-    const leafCount = 10; // Número de hojas
-    const container = document.querySelector(".background-animation");
+    const leafCount = 10;
+    const container = document.querySelector('.background-animation');
 
     if (container) {
       for (let i = 0; i < leafCount; i++) {
-        const leaf = document.createElement("div");
-        leaf.classList.add("leaf");
+        const leaf = document.createElement('div');
+        leaf.classList.add('leaf');
         container.appendChild(leaf);
       }
     }
@@ -28,25 +26,20 @@ function App() {
 
   return (
     <>
-      {/* Fondo animado */}
       <div className="background-animation"></div>
-
-      {/* Contenido principal */}
       <div className="App">
+        <Navbar />
         <main className="inicio">
-          <Router>
-            <Navbar />
-            <Routes>
-              <Route index element={<Home />} />
-              <Route path="/" element={<Home />} />
-              <Route path="/home" element={<Home />} />
-              <Route path="/Contacto" element={<Contacto />} />
-              <Route path="/Servicios" element={<Servicios />} />
-              <Route path="/Terminos" element={<Terminos />} />
-              <Route path="/Privacidad" element={<Privacidad />} />
-              <Route path="*" element={<Navigate replace to="/" />} />
-            </Routes>
-          </Router>
+          <Routes>
+            <Route index element={<Home />} />
+            <Route path="/" element={<Home />} />
+            <Route path="/home" element={<Home />} />
+            <Route path="/contacto" element={<Contacto />} />
+            <Route path="/servicios" element={<Servicios />} />
+            <Route path="/terminos" element={<Terminos />} />
+            <Route path="/privacidad" element={<Privacidad />} />
+            <Route path="*" element={<Navigate replace to="/" />} />
+          </Routes>
         </main>
         <Footer />
       </div>
