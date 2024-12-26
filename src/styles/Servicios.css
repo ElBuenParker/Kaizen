@@ -1,16 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;700&display=swap');
 
-
 /* Contenedor principal */
 .servicios-container {
   position: relative;
-  z-index: 10; /* Al frente del fondo */
+  z-index: 10;
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
   font-family: Arial, sans-serif;
-  color: #333;
   color: #B8C4C0;
 }
 
@@ -37,7 +35,6 @@
   margin: 20px auto;
 }
 
-/* Titulo de los servicios */
 h1 {
   text-align: center;
   font-size: 2rem;
@@ -45,7 +42,7 @@ h1 {
   color: #222;
 }
 
-/* Estado inicial: diseño tipo lista */
+/* Servicios */
 .servicio {
   display: flex;
   align-items: center;
@@ -84,6 +81,7 @@ h1 {
 
 .servicio:hover .icon-leaf {
   color: #24493E;
+  transform: translateY(-4px) scale(1.1);
 }
 
 .servicio.active {
@@ -138,14 +136,12 @@ h1 {
   cursor: pointer;
   width: auto;
   max-width: 250px;
-  margin: 20px auto; /* Centrado en el contenedor */
+  margin: 20px auto;
   text-align: center;
-  position: relative;
 }
 
 .btn-whatsapp:hover {
   transform: translateY(-5px) scale(1.1);
-
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
   background-color: #546b63;
 }
@@ -170,6 +166,12 @@ h1 {
   height: 200px;
   object-fit: cover;
   filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.5));
+  transition: transform 0.6s ease-in-out;
+}
+
+.servicios-portada:hover {
+  transform: scale(1.1) rotateY(360deg);
+
 }
 
 /* Responsive */

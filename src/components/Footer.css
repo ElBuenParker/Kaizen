@@ -26,6 +26,8 @@
 
 .footer-link:hover {
   color: #52bd92; /* Color al pasar el ratón sobre los enlaces */
+  transform: translateY(-1px) scale(1.1);
+
 }
 
 .footer-rights {

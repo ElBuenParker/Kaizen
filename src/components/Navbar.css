@@ -47,6 +47,8 @@ body {
 
 .navbar-link:hover {
   color: #244C3C; /* Color de hover */
+  transform: translateY(-1px) scale(1.1);
+
 }
 
 .menu-icon {
