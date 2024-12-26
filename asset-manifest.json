@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.e59a3891.css",
+    "main.css": "/static/css/main.7f6067ef.css",
     "main.js": "/static/js/main.63b59141.js",
     "static/js/488.cf4d4adb.chunk.js": "/static/js/488.cf4d4adb.chunk.js",
     "static/media/image2.jpg": "/static/media/image2.6e86a41292606b5616b4.jpg",
@@ -9,12 +9,12 @@
     "static/media/Kaizen.png": "/static/media/Kaizen.9f7f61036d078696fb61.png",
     "static/media/Kaizen_horizontal_2.png": "/static/media/Kaizen_horizontal_2.2526feae5dfb70f2a634.png",
     "index.html": "/index.html",
-    "main.e59a3891.css.map": "/static/css/main.e59a3891.css.map",
+    "main.7f6067ef.css.map": "/static/css/main.7f6067ef.css.map",
     "main.63b59141.js.map": "/static/js/main.63b59141.js.map",
     "488.cf4d4adb.chunk.js.map": "/static/js/488.cf4d4adb.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e59a3891.css",
+    "static/css/main.7f6067ef.css",
     "static/js/main.63b59141.js"
   ]
 }
