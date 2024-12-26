@@ -37,7 +37,7 @@ const AvisoPrivacidad = () => {
 
         <section>
           <h2>6. Contacto</h2>
-          <p>Si tienes alguna pregunta o solicitud sobre tu privacidad, contáctanos a través de nuestro correo electrónico <a href="mailto:contacto@kaizen.com">contacto@kaizen.com</a>.</p>
+          <p>Si tienes alguna pregunta o solicitud sobre tu privacidad, contáctanos a través de nuestro correo electrónico <a href="mailto:Kaizen.talent.rrhh@gmail.com">Kaizen.talent.rrhh@gmail.com</a>.</p>
         </section>
       </div>
 

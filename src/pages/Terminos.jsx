@@ -32,12 +32,12 @@ const Terminos = () => {
 
         <section>
           <h2>5. Privacidad y Protección de Datos</h2>
-          <p>Nos comprometemos a proteger tu privacidad. Para más información, consulta nuestra <a href="/politica-privacidad">Política de Privacidad</a>.</p>
+          <p>Nos comprometemos a proteger tu privacidad. Para más información, consulta nuestra Política de Privacidad.</p>
         </section>
 
         <section>
           <h2>6. Contacto</h2>
-          <p>Si tienes alguna pregunta sobre estos términos, por favor contáctanos a través de nuestro correo electrónico <a href="mailto:contacto@kaizen.com">contacto@kaizen.com</a>.</p>
+          <p>Si tienes alguna pregunta sobre estos términos, por favor contáctanos a través de nuestro correo electrónico <a href="mailto:Kaizen.talent.rrhh@gmail.com">Kaizen.talent.rrhh@gmail.com</a>.</p>
         </section>
       </div>
 
