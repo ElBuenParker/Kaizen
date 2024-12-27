@@ -31,6 +31,7 @@
 .features {
   width: 100%;
   padding: 20px;
+  
 }
 
 .feature-item, .feature-item2 {
@@ -39,10 +40,12 @@
   align-items: center;
   margin-bottom: 20px;
   flex-wrap: nowrap;
+  
 }
 
 .feature-item2 {
   flex-direction: row-reverse;
+  
 }
 
 .image-main {
@@ -72,6 +75,7 @@
   position: absolute;
   top: 80%;
   left: 50%;
+  width: 80%;
   transform: translate(-50%, -50%);
   text-align: center;
   color: white;
