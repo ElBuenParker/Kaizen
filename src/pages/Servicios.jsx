@@ -57,7 +57,7 @@ const Servicios = () => {
       <div className="servicios-header">
         <h1>Servicios</h1>
         <hr className="separator" />
-        <p>
+        <p className='textServiciosHeader'>
           Impulsa el crecimiento de tu empresa con soluciones en Recursos Humanos a tu medida. <br />
           En KAIZEN, nos especializamos en brindar apoyo estratégico a microempresas, Pymes y emprendedores,
           ayudándote a optimizar tus recursos humanos y fortalecer tus departamentos clave. Desde la creación de

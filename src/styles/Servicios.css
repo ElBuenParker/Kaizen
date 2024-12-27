@@ -12,6 +12,20 @@
   color: #B8C4C0;
 }
 
+.textServiciosHeader {
+  color: #24493E;
+  background-color: #B8C4C0;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 0 5px #24493E, 0 0 0 7px #24493E; /* Efecto de borde irregular */
+  font-family: 'Outfit', sans-serif; /* Estilo de fuente cómic */
+  transition: transform 0.3s ease; /* Añade transición suave al cambio de tamaño */
+}
+
+.textServiciosHeader:hover {
+  transform: scale(1.04); /* Hace que el elemento crezca un 5% */
+}
+
 /* Contenedor de título y descripción */
 .servicios-header {
   width: 100%;
@@ -20,19 +34,24 @@
   text-align: center;
   color: white;
   margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .servicios-header h1 {
   font-size: 3rem;
-  color: #A5A595;
+  color: #24493E;
   margin: 0;
   font-family: 'Roboto Slab', serif;
 }
 
 .separator {
-  border: 1px solid #A5A595;
-  width: 50%;
+  border: 1px solid #24493E;
+  width: 20%;
+  height: 20%;
   margin: 20px auto;
+  transform: rotate(90deg);
 }
 
 h1 {
@@ -186,7 +205,13 @@ h1 {
     border-right: none;
     border-bottom: 1px solid #ddd;
   }
-
+  .separator {
+    border: 1px solid #24493E;
+    width: 50%;
+    margin: 20px auto;
+    transform: rotate(0deg);
+  }
+  
   .servicio-content {
     max-width: 100%;
     padding: 10px 20px;
@@ -198,5 +223,24 @@ h1 {
 
   .servicio-content ul {
     padding-left: 15px;
+  }
+  .servicios-container {
+    position: relative;
+    z-index: 10;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    color: #B8C4C0;
+  }
+  .servicios-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .servicios-header h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
   }
 }

@@ -11,18 +11,6 @@ import Terminos from './pages/Terminos';
 import Privacidad from './pages/Privacidad';
 
 function App() {
-  useEffect(() => {
-    const leafCount = 10;
-    const container = document.querySelector('.background-animation');
-
-    if (container) {
-      for (let i = 0; i < leafCount; i++) {
-        const leaf = document.createElement('div');
-        leaf.classList.add('leaf');
-        container.appendChild(leaf);
-      }
-    }
-  }, []);
 
   return (
     <>
