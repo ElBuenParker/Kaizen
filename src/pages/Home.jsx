@@ -37,7 +37,7 @@ function Home() {
       {/* Texto de Main */}
       <div className="txt-main">
         <p>
-          KAIZEN es tu aliado estratégico en la optimización de recursos humanos, enfocado en microempresas, Pymes y emprendedores. Nuestra misión es ayudarte a estructurar y fortalecer tus departamentos clave, desde la creación de perfiles de puesto y organigramas hasta el desarrollo de procesos y formatos personalizados.
+          KAIZEN en tu aliado estratégico en la optimización de recursos humanos, nos enfocamos en microempresas, Pymes y emprendedores. Nuestra misión es ayudarte a estructurar y fortalecer tus departamentos clave, desde la creación de perfiles de puesto y organigramas hasta el desarrollo de procesos y formatos personalizados.
         </p>
         
       </div>
@@ -55,7 +55,7 @@ function Home() {
           {/* Texto */}
           <div className="text-content" data-aos="fade-left">
             <p>
-              Contamos con una amplia experiencia en evaluación de colaboradores, satisfacción laboral, detección de necesidades de capacitación y atracción de talento. Ofrecemos soluciones diseñadas para impulsar el crecimiento de tu empresa, siempre adaptándonos a tu presupuesto.
+              Somos una empresa joven con experiencia en evaluación de colaboradores, satisfacción laboral, detección de necesidades de capacitación y atracción de talento. Ofrecemos soluciones diseñadas para impulsar el crecimiento de tu empresa, siempre adaptándonos a tu presupuesto.
             <br></br>
             <br></br>
 
